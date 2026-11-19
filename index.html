@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Customer Registration Form</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <body>
+       <u>
+            <h1 style="margin-left: 400px;">Customer Registration Form</h1>
+            <p  style="margin-left: 400px;">Please Fill The Form Below</p>
+        </u>
+
+        <form  id="customerForm"
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbxL19homRHqfMa0FZA115i91zv_1y9i_P0PYDBWJdruTJXRLyqdr1fCgYmEz-dpEel1/exec"
+            target="hidden_iframe">
+             
+            <label>Full Name:</label>
+            <input type="text"
+                    name="name"
+                    placeholder="Enter Your Full Name"
+                    required>
+            <br><br>
+
+            <label>Email:</label>
+            <input type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+            <br><br>
+
+            <label>Mobile Number:</label>
+            <input type="tel"
+                    name="mobile"
+                    placeholder="Enter mobile number"
+                    required>
+            <br><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" required>
+            Male
+            <input type="radio" name="gender" value="Female">
+            Female
+            <br><br>
+
+            <label>Select Service:</label>
+            <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="Service A">Service A</option>
+            <option value="Service B">Service B</option>
+            <option value="Service C">Service C</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+<script>
+const form = document.getElementById("customerForm");
+
+form.addEventListener("submit", function() {
+
+    setTimeout(function() {
+
+        alert("Form Submitted Successfully!");
+
+        form.reset();
+
+        window.location.reload();
+
+    }, 1000);
+
+});
+</script>
+
+</body>
+</html>
